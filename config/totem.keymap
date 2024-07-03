@@ -44,6 +44,16 @@
             key-positions = <11 12 13>;
             bindings = <&tog TVP1>;
         };
+
+        backspace {
+            bindings = <&kp BACKSPACE>;
+            key-positions = <16 17>;
+        };
+
+        opt_backspace {
+            bindings = <&kp LA(BACKSPACE)>;
+            key-positions = <16 17 18>;
+        };
     };
 
     macros {

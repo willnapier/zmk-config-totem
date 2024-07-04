@@ -151,10 +151,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-        &none  &none  &kp LEFT_BRACE              &kp RIGHT_BRACE                 &more_or_equal      &kp PLUS   &kp KP_N7  &kp KP_N8  &kp KP_N9  &kp KP_PLUS
-        &none  &none  &kp LEFT_PARENTHESIS        &kp RIGHT_PARENTHESIS           &fun_arrow_right    &kp EQUAL  &kp KP_N4  &kp KP_N5  &kp KP_N6  &kp KP_MINUS
-&trans  &none  &none  &mt LEFT_BRACKET LESS_THAN  &mt RIGHT_BRACKET GREATER_THAN  &less_or_equal      &kp MINUS  &kp KP_N1  &kp KP_N2  &kp KP_N3  &kp KP_MULTIPLY  &kp SLASH
-                      &trans                      &trans                          &trans              &mo 4      &kp KP_N0  &trans
+        &kp HASH         &kp DOLLAR  &kp LEFT_BRACE              &kp RIGHT_BRACE                 &more_or_equal      &kp PLUS   &kp KP_N7  &kp KP_N8  &kp KP_N9  &kp SEMICOLON
+        &kp EXCLAMATION  &kp AT      &kp LEFT_PARENTHESIS        &kp RIGHT_PARENTHESIS           &fun_arrow_right    &kp EQUAL  &kp KP_N4  &kp KP_N5  &kp KP_N6  &kp KP_MULTIPLY
+&trans  &kp PERCENT      &kp LCTRL   &mt LEFT_BRACKET LESS_THAN  &mt RIGHT_BRACKET GREATER_THAN  &less_or_equal      &kp MINUS  &kp KP_N1  &kp KP_N2  &kp KP_N3  &kp PERIOD       &kp SLASH
+                                     &trans                      &trans                          &trans              &mo 4      &kp KP_N0  &trans
             >;
         };
 

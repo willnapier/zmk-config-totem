@@ -118,10 +118,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-         &kp Q                   &kp W       &kp D             &kp F             &kp K        &kp J    &kp U                &kp R             &kp L       &kp SEMI
-         &mt LS(LEFT_CONTROL) A  &mt LALT S  &mt LEFT_SHIFT E  &lt 1 T           &kp G        &kp Y    &mt RIGHT_COMMAND N  &mt LEFT_SHIFT I  &mt RALT O  &mt RIGHT_CONTROL H
-&kp TAB  &kp Z                   &kp X       &kp C             &kp V             &kp B        &kp P    &kp M                &kp COMMA         &kp DOT     &kp FSLH             &kp SQT
-                                             &kp DEL           &kp LEFT_COMMAND  &kp SPACE    &kp RET  &lt 3 ESC            &kp BSPC
+         &kp Q  &kp W  &kp D    &kp F             &kp K        &kp J    &kp U      &kp R      &kp L    &kp SEMI
+         &kp A  &kp S  &kp E    &kp T             &kp G        &kp Y    &kp N      &kp I      &kp O    &kp H
+&kp TAB  &kp Z  &kp X  &kp C    &kp V             &kp B        &kp P    &kp M      &kp COMMA  &kp DOT  &kp FSLH  &kp SQT
+                       &kp DEL  &kp LEFT_COMMAND  &kp SPACE    &kp RET  &lt 3 ESC  &kp BSPC
             >;
         };
 

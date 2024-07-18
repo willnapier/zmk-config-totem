@@ -121,7 +121,7 @@
          &kp Q  &kp W  &kp D    &kp F             &kp K        &kp J    &kp U      &kp R      &kp L    &kp SEMI
          &kp A  &kp S  &kp E    &kp T             &kp G        &kp Y    &kp N      &kp I      &kp O    &kp H
 &kp TAB  &kp Z  &kp X  &kp C    &kp V             &kp B        &kp P    &kp M      &kp COMMA  &kp DOT  &kp FSLH  &kp SQT
-                       &kp DEL  &kp LEFT_COMMAND  &kp SPACE    &kp RET  &lt 3 ESC  &kp BSPC
+                       &kp DEL  &kp LEFT_COMMAND  &kp SPACE    &kp RET  &lt 3 ESC  &kp DEL
             >;
         };
 

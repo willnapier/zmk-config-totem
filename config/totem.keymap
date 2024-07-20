@@ -148,10 +148,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-         &kp Q                &kp W        &kp D         &kp F             &kp K        &kp J    &kp U             &kp R               &kp L             &mt SEMI SEMICOLON
+         &kp Q                &kp W        &lt 2 D       &kp F             &kp K        &kp J    &kp U             &lt 2 R             &kp L             &mt SEMI SEMICOLON
          &hml LEFT_CONTROL A  &hml LALT S  &hml LSHFT E  &lt 1 T           &kp G        &kp Y    &hmr RIGHT_GUI N  &hmr RIGHT_SHIFT I  &hmr RIGHT_ALT O  &hmr RIGHT_CONTROL H
 &kp TAB  &kp Z                &kp X        &kp C         &kp V             &kp B        &kp P    &kp M             &kp COMMA           &kp DOT           &kp FSLH              &mt SQT DOUBLE_QUOTES
-                                           &mo 2         &kp LEFT_COMMAND  &kp SPACE    &kp RET  &lt 3 ESC         &kp DEL
+                                           &mo 2         &sk LEFT_COMMAND  &kp SPACE    &kp RET  &lt 3 ESC         &kp DEL
             >;
         };
 
@@ -164,7 +164,7 @@
             >;
         };
 
-        nav_layer {
+        digits {
             // ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
 
             label = "NAVI";

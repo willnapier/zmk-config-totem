@@ -91,6 +91,13 @@
             bindings = <&kp MINUS &kp GT>;
             label = "FUN_ARROW_RIGHT";
         };
+
+        macros_comment: macros_comment {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp FSLH &kp STAR>;
+            label = "MACROS_COMMENT";
+        };
     };
 
     behaviors {
@@ -121,6 +128,16 @@
             hold-trigger-key-positions = <35 36 37>;
             hold-trigger-on-release;
         };
+
+        behavior_slash_or_comment: behavior_slash_or_comment {
+            compatible = "zmk,behavior-hold-tap";
+            label = "BEHAVIOR_SLASH_OR_COMMENT";
+            bindings = <&macros_comment>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            flavor = "balanced";
+        };
     };
 
     keymap {
@@ -147,7 +164,7 @@
             bindings = <
          &kp Q                &kp W        &lt 2 D       &kp F             &kp K        &kp J    &kp U             &lt 2 R             &kp L             &mt COLON SEMICOLON
          &hml LEFT_CONTROL A  &hml LALT S  &hml LSHFT E  &lt 1 T           &kp G        &kp Y    &hmr RIGHT_GUI N  &hmr RIGHT_SHIFT I  &hmr RIGHT_ALT O  &hmr RIGHT_CONTROL H
-&kp TAB  &kp Z                &kp X        &kp C         &kp V             &kp B        &kp P    &kp M             &kp COMMA           &kp DOT           &kp FSLH              &mt DOUBLE_QUOTES SQT
+&kp TAB  &kp Z                &kp X        &kp C         &kp V             &kp B        &kp P    &kp M             &kp COMMA           &kp DOT           &behavior_slash_or_comment 0 SLASH  &mt DOUBLE_QUOTES SQT
                                            &mo 2         &sk LEFT_COMMAND  &kp SPACE    &kp RET  &lt 3 ESC         &mo 2
             >;
         };
@@ -202,10 +219,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-        &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT    &kp CARET     &kp AMPERSAND  &kp ASTERISK  &kp MINUS   &kp EQUAL
-        &trans    &trans  &trans    &trans    &trans       &kp C_MUTE    &kp C_PP       &trans        &trans      &trans
-&trans  &trans    &trans  &trans    &trans    &trans       &kp C_VOL_DN  &kp C_VOL_UP   &kp C_PREV    &kp C_NEXT  &trans     &trans
-                          &trans    &trans    &trans       &trans        &kp C_PP       &trans
+        &kp F1  &kp F2  &kp F3  &kp F4  &kp F5    &kp F6        &kp F7        &kp F8      &kp F9      &kp F10
+        &trans  &trans  &trans  &trans  &trans    &kp C_MUTE    &kp C_PP      &trans      &trans      &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &kp C_VOL_DN  &kp C_VOL_UP  &kp C_PREV  &kp C_NEXT  &trans   &trans
+                        &trans  &trans  &trans    &trans        &kp C_PP      &trans
             >;
         };
 

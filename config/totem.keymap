@@ -149,10 +149,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-         &kp Q                &kp W        &lt 2 D       &kp F             &kp K        &kp J    &kp U             &lt 2 R             &kp L             &mt COLON SEMICOLON
-         &hml LEFT_CONTROL A  &hml LALT S  &hml LSHFT E  &lt 1 T           &kp G        &kp Y    &hmr RIGHT_GUI N  &hmr RIGHT_SHIFT I  &hmr RIGHT_ALT O  &hmr RIGHT_CONTROL H
-&kp TAB  &kp Z                &kp X        &kp C         &kp V             &kp B        &kp P    &kp M             &kp COMMA           &kp DOT           &behavior_slash_or_comment 0 SLASH  &mt DOUBLE_QUOTES SQT
-                                           &mo 2         &sk LEFT_COMMAND  &kp SPACE    &kp RET  &lt 3 ESC         &mo 2
+         &kp Q                &kp W        &lt 2 D         &kp F             &kp K        &kp J    &kp U             &lt 2 R             &kp L             &mt COLON SEMICOLON
+         &hml LEFT_CONTROL A  &hml LALT S  &hml LSHFT E    &lt 1 T           &kp G        &kp Y    &hmr RIGHT_GUI N  &hmr RIGHT_SHIFT I  &hmr RIGHT_ALT O  &hmr RIGHT_CONTROL H
+&kp TAB  &kp Z                &kp X        &kp C           &kp V             &kp B        &kp P    &kp M             &kp COMMA           &kp DOT           &behavior_slash_or_comment 0 SLASH  &mt DOUBLE_QUOTES SQT
+                                           &sk LEFT_SHIFT  &sk LEFT_COMMAND  &kp SPACE    &kp RET  &lt 3 ESC         &mo 2
             >;
         };
 
@@ -160,7 +160,7 @@
             bindings = <
         &trans  &kp LS(LG(NUMBER_3))  &kp LS(LG(NUMBER_4))  &trans  &trans    &trans  &kp HOME            &kp UP_ARROW    &kp END              &trans
         &trans  &trans                &trans                &trans  &trans    &trans  &kp LEFT_ARROW      &kp DOWN_ARROW  &kp RIGHT_ARROW      &trans
-&trans  &trans  &trans                &trans                &trans  &trans    &trans  &kp LA(LEFT_ARROW)  &trans          &kp LA(RIGHT_ARROW)  &trans  &kp LC(LA(SPACE))
+&trans  &trans  &trans                &trans                &trans  &trans    &trans  &kp LA(LEFT_ARROW)  &trans          &kp LA(RIGHT_ARROW)  &trans  &kp GLOBE
                                       &trans                &trans  &trans    &trans  &trans              &trans
             >;
         };

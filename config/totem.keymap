@@ -149,10 +149,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-         &kp Q                &kp W        &lt 2 D         &kp F             &kp K        &kp J    &kp U             &lt 2 R             &kp L             &mt COLON SEMICOLON
-         &hml LEFT_CONTROL A  &hml LALT S  &hml LSHFT E    &lt 1 T           &kp G        &kp Y    &hmr RIGHT_GUI N  &hmr RIGHT_SHIFT I  &hmr RIGHT_ALT O  &hmr RIGHT_CONTROL H
-&kp TAB  &kp Z                &kp X        &kp C           &kp V             &kp B        &kp P    &kp M             &kp COMMA           &kp DOT           &behavior_slash_or_comment 0 SLASH  &mt DOUBLE_QUOTES SQT
-                                           &sk LEFT_SHIFT  &sk LEFT_COMMAND  &kp SPACE    &kp RET  &lt 3 ESC         &mo 2
+         &kp Q                &kp W        &lt 2 D       &kp F             &kp K        &kp J    &kp U             &lt 2 R             &kp L             &mt COLON SEMICOLON
+         &hml LEFT_CONTROL A  &hml LALT S  &hml LSHFT E  &lt 1 T           &kp G        &kp Y    &hmr RIGHT_GUI N  &hmr RIGHT_SHIFT I  &hmr RIGHT_ALT O  &hmr RIGHT_CONTROL H
+&kp TAB  &kp Z                &kp X        &kp C         &kp V             &kp B        &kp P    &kp M             &kp COMMA           &kp DOT           &behavior_slash_or_comment 0 SLASH  &mt DOUBLE_QUOTES SQT
+                                           &mo 2         &sk LEFT_COMMAND  &kp SPACE    &kp RET  &lt 3 ESC         &mo 2
             >;
         };
 
@@ -182,9 +182,9 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-        &kp HASH                       &kp DOLLAR             &kp LEFT_BRACE                    &kp RIGHT_BRACE                 &more_or_equal      &kp PLUS   &kp N7        &kp N8        &kp N9        &kp SEMICOLON
+        &kp PIPE                       &kp DOLLAR             &kp LEFT_BRACE                    &kp RIGHT_BRACE                 &more_or_equal      &kp PLUS   &kp N7        &kp N8        &kp N9        &kp SEMICOLON
         &hml LEFT_CONTROL EXCLAMATION  &hml LEFT_ALT AT_SIGN  &hml LEFT_SHIFT LEFT_PARENTHESIS  &lt 1 RIGHT_PARENTHESIS         &fun_arrow_right    &kp EQUAL  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp KP_MULTIPLY
-&trans  &kp PERCENT                    &kp LCTRL              &mt LESS_THAN LEFT_BRACKET        &mt GREATER_THAN RIGHT_BRACKET  &less_or_equal      &kp MINUS  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp PERIOD       &kp SLASH
+&trans  &kp AMPERSAND                  &kp LCTRL              &mt LESS_THAN LEFT_BRACKET        &mt GREATER_THAN RIGHT_BRACKET  &less_or_equal      &kp MINUS  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp PERIOD       &kp SLASH
                                                               &trans                            &trans                          &trans              &trans     &kp N0        &trans
             >;
         };

@@ -128,6 +128,26 @@
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
+            flavor = "tap-preferred";
+        };
+
+        greater_or_greater_or_equal: greater_or_greater_or_equal {
+            compatible = "zmk,behavior-hold-tap";
+            label = "GREATER_OR_GREATER_OR_EQUAL";
+            bindings = <&more_or_equal>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            flavor = "balanced";
+        };
+
+        less_or_less_or_equal: less_or_less_or_equal {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LESS_OR_LESS_OR_EQUAL";
+            bindings = <&less_or_equal>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
             flavor = "balanced";
         };
     };
@@ -187,10 +207,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-        &kp PIPE                       &kp DOLLAR             &kp LEFT_BRACE                    &kp RIGHT_BRACE                 &more_or_equal      &kp PLUS   &kp N7        &kp N8        &kp N9        &kp SEMICOLON
-        &hml LEFT_CONTROL EXCLAMATION  &hml LEFT_ALT AT_SIGN  &hml LEFT_SHIFT LEFT_PARENTHESIS  &lt 1 RIGHT_PARENTHESIS         &fun_arrow_right    &kp EQUAL  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp KP_MULTIPLY
-&trans  &kp AMPERSAND                  &kp LCTRL              &mt LESS_THAN LEFT_BRACKET        &mt GREATER_THAN RIGHT_BRACKET  &less_or_equal      &kp MINUS  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp PERIOD       &kp SLASH
-                                                              &trans                            &trans                          &trans              &trans     &kp N0        &trans
+        &kp PIPE                       &kp DOLLAR             &kp LEFT_BRACE                    &kp RIGHT_BRACE                 &greater_or_greater_or_equal 0 GREATER_THAN    &kp PLUS   &kp N7        &kp N8        &kp N9        &kp SEMICOLON
+        &hml LEFT_CONTROL EXCLAMATION  &hml LEFT_ALT AT_SIGN  &hml LEFT_SHIFT LEFT_PARENTHESIS  &lt 1 RIGHT_PARENTHESIS         &fun_arrow_right                               &kp EQUAL  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp KP_MULTIPLY
+&trans  &kp AMPERSAND                  &kp LCTRL              &mt LESS_THAN LEFT_BRACKET        &mt GREATER_THAN RIGHT_BRACKET  &less_or_less_or_equal 0 LESS_THAN             &kp MINUS  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp PERIOD       &kp SLASH
+                                                              &trans                            &trans                          &trans                                         &trans     &kp N0        &trans
             >;
         };
 

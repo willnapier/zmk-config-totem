@@ -187,7 +187,7 @@
             bindings = <
         &trans  &kp LS(LG(NUMBER_3))  &kp LS(LG(NUMBER_4))  &trans  &trans    &none   &kp HOME      &kp UP    &kp END        &kt PAGE_UP
         &trans  &trans                &trans                &trans  &trans    &none   &kp LEFT      &kp DOWN  &kp RIGHT      &none
-&trans  &trans  &trans                &trans                &trans  &trans    &none   &kp LA(LEFT)  &none     &kp LA(RIGHT)  &kt PAGE_DOWN  &kp GLOBE
+&trans  &trans  &trans                &trans                &trans  &trans    &none   &kp LA(LEFT)  &none     &kp LA(RIGHT)  &kt PAGE_DOWN  &kp CAPSLOCK
                                       &trans                &trans  &trans    &trans  &trans        &trans
             >;
         };

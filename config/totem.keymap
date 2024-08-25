@@ -37,13 +37,13 @@
         combo_esc {
             timeout-ms = <80>;
             key-positions = <0 1>;
-            bindings = <&kp ESC>;
+            bindings = <&to 4>;
         };
 
         backspace {
             bindings = <&kp BACKSPACE>;
             key-positions = <16 17>;
-            timeout-ms = <50>;
+            timeout-ms = <70>;
         };
 
         opt_backspace {
@@ -52,13 +52,14 @@
             timeout-ms = <70>;
         };
 
-        braces-open {
+        shift {
             bindings = <&sk LEFT_SHIFT>;
             key-positions = <13 12>;
+            timeout-ms = <100>;
         };
 
         toControl {
-            bindings = <&tog 4>;
+            bindings = <&tog 5>;
             key-positions = <32 37>;
         };
     };

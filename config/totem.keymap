@@ -264,11 +264,11 @@
             >;
         };
 
-        qwerty {
+        rus {
             bindings = <
-        &kp Q  &kp W  &kp E   &kp R   &kp T     &kp Y   &kp U   &mt L O             &kp P              &kp LEFT_BRACKET
-        &kp A  &kp S  &kp D   &kp F   &kp G     &kp H   &kp J   &kp K               &kp L              &kp SEMICOLON
-&trans  &kp Z  &kp X  &kp C   &kp V   &kp B     &kp N   &kp M   &mt KP_COMMA COMMA  &mt KP_DOT PERIOD  &mt KP_SLASH QUESTION  &trans
+        &kp Q  &kp W  &kp E   &kp R   &kp T     &kp Y   &kp U   &mt O I          &kp P                 &kp LEFT_BRACKET
+        &kp A  &kp S  &kp D   &kp F   &kp G     &kp H   &kp J   &kp K            &kp L                 &kp SEMICOLON
+&trans  &kp Z  &kp X  &kp C   &kp V   &kp B     &kp N   &kp M   &mt SLASH COMMA  &mt LS(SLASH) PERIOD  &mt SLASH LS(N7)  &trans
                       &trans  &trans  &trans    &trans  &trans  &trans
             >;
         };

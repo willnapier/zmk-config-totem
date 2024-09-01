@@ -160,7 +160,7 @@
             label = "BEHAVIOR_SLASH_OR_COMMENT";
             bindings = <&press_two_keys>, <&kp>;
 
-            #binding-cells = <2>;
+            #binding-cells = <3>;
             tapping-term-ms = <200>;
             flavor = "tap-preferred";
         };

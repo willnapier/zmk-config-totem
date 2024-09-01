@@ -83,6 +83,19 @@
                 ;
         };
 
+        press_two_keys: press_two_keys {
+            compatible = "zmk,behavior-macro-two-param";
+            wait-ms = <0>;
+            tap-ms = <0>;
+            #binding-cells = <2>;
+            bindings
+                = <&macro_param_1to1>
+                , <&macro_tap &kp MACRO_PLACEHOLDER>
+                , <&macro_param_2to1>
+                , <&macro_tap &kp MACRO_PLACEHOLDER>
+                ;
+        };
+
         more_or_equal: more_or_equal {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;

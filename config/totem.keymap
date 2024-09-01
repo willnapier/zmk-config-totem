@@ -174,7 +174,7 @@
             bindings = <
          &kp Q                &kp W        &lt 2 D       &kp F             &kp K        &kp J    &kp U             &lt 2 R             &kp L             &mt COLON SEMICOLON
          &hml LEFT_CONTROL A  &hml LALT S  &hml LSHFT E  &lt 1 T           &kp G        &kp Y    &hmr RIGHT_GUI N  &hmr RIGHT_SHIFT I  &hmr RIGHT_ALT O  &hmr RIGHT_CONTROL H
-&kp TAB  &kp Z                &kp X        &kp C         &kp V             &kp B        &kp P    &kp M             &kp COMMA           &kp DOT           &behavior_slash_or_comment SLASH SLASH  &mt DOUBLE_QUOTES SQT
+&kp TAB  &kp Z                &kp X        &kp C         &kp V             &kp B        &kp P    &kp M             &kp COMMA           &kp DOT           &behavior_slash_or_comment ASTERISK SLASH  &mt DOUBLE_QUOTES SQT
                                            &mo 2         &sk LEFT_COMMAND  &kp SPACE    &kp RET  &lt 3 ESC         &mo 2
             >;
         };

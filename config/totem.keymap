@@ -37,7 +37,7 @@
         combo_esc {
             timeout-ms = <80>;
             key-positions = <0 1>;
-            bindings = <&to 4>;
+            bindings = <&to 0>;
         };
 
         backspace {
@@ -59,7 +59,7 @@
         };
 
         toControl {
-            bindings = <&tog 5>;
+            bindings = <&tog 1>;
             key-positions = <32 37>;
         };
     };
@@ -172,10 +172,19 @@
         Norman {
             label = "BASE";
             bindings = <
-         &kp Q                &kp W        &lt 2 D       &kp F             &kp K        &kp J    &kp U             &lt 2 R             &kp L             &mt COLON SEMICOLON
-         &hml LEFT_CONTROL A  &hml LALT S  &hml LSHFT E  &lt 1 T           &kp G        &kp Y    &hmr RIGHT_GUI N  &hmr RIGHT_SHIFT I  &hmr RIGHT_ALT O  &hmr RIGHT_CONTROL H
+         &kp Q                &kp W        &lt 3 D       &kp F             &kp K        &kp J    &kp U             &lt 3 R             &kp L             &mt COLON SEMICOLON
+         &hml LEFT_CONTROL A  &hml LALT S  &hml LSHFT E  &lt 2 T           &kp G        &kp Y    &hmr RIGHT_GUI N  &hmr RIGHT_SHIFT I  &hmr RIGHT_ALT O  &hmr RIGHT_CONTROL H
 &kp TAB  &kp Z                &kp X        &kp C         &kp V             &kp B        &kp P    &kp M             &kp COMMA           &kp DOT           &behavior_slash_or_comment SLASH ASTERISK  &mt DOUBLE_QUOTES SQT
-                                           &mo 2         &sk LEFT_COMMAND  &kp SPACE    &kp RET  &lt 3 ESC         &mo 2
+                                           &mo 3         &sk LEFT_COMMAND  &kp SPACE    &kp RET  &lt 4 ESC         &mo 3
+            >;
+        };
+
+        rus {
+            bindings = <
+        &kp Q  &kp W  &kp E   &kp R   &kp T     &kp Y   &kp U   &mt O I           &kp P                &kp LEFT_BRACKET
+        &kp A  &kp S  &kp D   &kp F   &kp G     &kp H   &kp J   &kp K             &kp L                &kp SEMICOLON
+&trans  &kp Z  &kp X  &kp C   &kp V   &kp B     &kp N   &kp M   &mt SLASH PERIOD  &mt LS(SLASH) COMMA  &mt SLASH LS(N7)  &trans
+                      &trans  &trans  &trans    &trans  &trans  &trans
             >;
         };
 
@@ -192,7 +201,7 @@
             label = "NAVI";
             bindings = <
         &kp PIPE                       &kp DOLLAR             &kp LEFT_BRACE                    &kp RIGHT_BRACE                 &press_two_keys GREATER_THAN EQUAL    &kp PLUS   &kp N7        &kp N8        &kp N9        &kp SEMICOLON
-        &hml LEFT_CONTROL EXCLAMATION  &hml LEFT_ALT AT_SIGN  &hml LEFT_SHIFT LEFT_PARENTHESIS  &lt 1 RIGHT_PARENTHESIS         &press_two_keys MINUS GREATER_THAN    &kp EQUAL  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp KP_MULTIPLY
+        &hml LEFT_CONTROL EXCLAMATION  &hml LEFT_ALT AT_SIGN  &hml LEFT_SHIFT LEFT_PARENTHESIS  &lt 2 RIGHT_PARENTHESIS         &press_two_keys MINUS GREATER_THAN    &kp EQUAL  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp KP_MULTIPLY
 &trans  &kp AMPERSAND                  &kp LCTRL              &mt LESS_THAN LEFT_BRACKET        &mt GREATER_THAN RIGHT_BRACKET  &press_two_keys LESS_THAN EQUAL       &kp MINUS  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp PERIOD       &kp SLASH
                                                               &trans                            &trans                          &trans                                &trans     &kp N0        &trans
             >;
@@ -205,25 +214,6 @@
             &trans  &trans  &trans        &trans      &trans        &kp C_MUTE    &kp C_PP      &trans      &trans      &trans
 &bt BT_CLR  &trans  &trans  &out OUT_TOG  &bt BT_PRV  &bt BT_NXT    &kp C_VOL_DN  &kp C_VOL_UP  &kp C_PREV  &kp C_NEXT  &trans   &trans
                             &trans        &trans      &trans        &trans        &kp C_PP      &trans
-            >;
-        };
-
-        adjust_layer {
-            label = "ADJ";
-            bindings = <
-        &sys_reset   &bt BT_CLR  &out OUT_TOG  &trans  &trans    &trans  &kp F7  &kp F8  &kp F9  &kp F12
-        &bootloader  &bt BT_NXT  &trans        &trans  &trans    &trans  &kp F4  &kp F5  &kp F6  &kp F11
-&trans  &trans       &bt BT_PRV  &trans        &trans  &trans    &trans  &kp F1  &kp F2  &kp F3  &kp F10  &trans
-                                 &trans        &trans  &trans    &trans  &to 0   &trans
-            >;
-        };
-
-        rus {
-            bindings = <
-        &kp Q  &kp W  &kp E   &kp R   &kp T     &kp Y   &kp U   &mt O I          &kp P                 &kp LEFT_BRACKET
-        &kp A  &kp S  &kp D   &kp F   &kp G     &kp H   &kp J   &kp K            &kp L                 &kp SEMICOLON
-&trans  &kp Z  &kp X  &kp C   &kp V   &kp B     &kp N   &kp M   &mt SLASH PERIOD  &mt LS(SLASH) COMMA  &mt SLASH LS(N7)  &trans
-                      &trans  &trans  &trans    &trans  &trans  &trans
             >;
         };
     };

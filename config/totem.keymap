@@ -34,10 +34,12 @@
     combos {
         compatible = "zmk,combos";
 
-        combo_esc {
-            timeout-ms = <80>;
+        combo_eng {
+            timeout-ms = <150>;
             key-positions = <0 1>;
-            bindings = <&to 0>;
+            bindings = <&to_eng>;
+            require-prior-idle-ms = <100>;
+            layers = <1>;
         };
 
         backspace {
@@ -58,9 +60,17 @@
             timeout-ms = <100>;
         };
 
-        toControl {
-            bindings = <&tog 1>;
+        to_digits_layer {
+            bindings = <&to 3>;
             key-positions = <32 37>;
+        };
+
+        combo_to_rus {
+            bindings = <&to_russian>;
+            key-positions = <9 8>;
+            timeout-ms = <150>;
+            require-prior-idle-ms = <100>;
+            layers = <0>;
         };
     };
 
@@ -123,6 +133,20 @@
             #binding-cells = <0>;
             bindings = <&kp FSLH &kp STAR>;
             label = "MACROS_COMMENT";
+        };
+
+        to_russian: to_russian {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&to 1 &kp LA(LG(LC(F)))>;
+            label = "NEW_MACRO";
+        };
+
+        to_eng: to_eng {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&to 0 &kp LC(LA(LG(D)))>;
+            label = "TO_ENG";
         };
     };
 

@@ -13,8 +13,13 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
+
+#include "zmk-helpers/helper.h"
+#include "zmk-helpers/key-labels/totem.h"
+#include "zmk-helpers/unicode-chars/russian.dtsi"
+
+#define ___ &trans
 
 #define BASE 0
 #define NAV  1

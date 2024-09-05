@@ -217,7 +217,7 @@
 
         rus {
             bindings = <
-        &kp ru_y             &kp ru_ts            &kp E              &kp R    &kp T     &kp Y   &kp U                 &mt O I              &kp P             &kp LEFT_BRACKET
+        &ru_y                &ru_ts               &kp E              &kp R    &kp T     &kp Y   &kp U                 &mt O I              &kp P             &kp LEFT_BRACKET
         &hml LEFT_CONTROL A  &hml LEFT_CONTROL S  &hml LEFT_SHIFT D  &lt 2 F  &kp G     &kp H   &hmr RIGHT_COMMAND J  &hmr RIGHT_SHIFT K   &hmr RIGHT_ALT L  &hmr RIGHT_CONTROL SEMICOLON
 &trans  &kp Z                &kp X                &kp C              &kp V    &kp B     &kp N   &kp M                 &mt LS(SLASH) COMMA  &mt SLASH PERIOD  &mt SLASH LS(N7)              &trans
                                                   &trans             &trans   &trans    &trans  &trans                &trans

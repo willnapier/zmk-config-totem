@@ -52,6 +52,13 @@
 //MAKE_HRM(hml_control, &kp LC, &ru_f, KEYS_R THUMBS)  // left-hand HRMs
 //MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // right-hand HRMs
 
+MAKE_HRM(
+    my_key_hrm, 
+    &kp LC,  // Left Control on hold
+    &kp A,   // Key 'A' on tap
+    0        // Trigger position (adjust if needed)
+);
+
 &mt {
     quick-tap-ms = <100>;
     global-quick-tap;

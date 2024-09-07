@@ -226,7 +226,7 @@
 
         hml_control: hml_control {
             compatible = "zmk,behavior-hold-tap";
-            bindings = <&kp LEFT_CONTROL>, <&ru_f>;
+            bindings = <kp LEFT_CONTROL>, <&ru_f>;
 
             #binding-cells = <2>;
             tapping-term-ms = <280>;

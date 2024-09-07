@@ -199,6 +199,17 @@
             tapping-term-ms = <200>;
             flavor = "tap-preferred";
         };
+
+        ru_sh_or_shch: ru_sh_or_shch {
+            compatible = "zmk,behavior-hold-tap";
+            label = "RU_SH_OR_SHCH";
+            bindings = <&ru_shch>, <&ru_sh>;
+
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            flavor = "tap-preferred";
+        };
+
     };
 
     keymap {

@@ -49,8 +49,8 @@
         hold-trigger-on-release; \
     )
 
-MAKE_HRM(hml_control, &kp LC, &ru_f, KEYS_R THUMBS)  // left-hand HRMs
-MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // right-hand HRMs
+//MAKE_HRM(hml_control, &kp LC, &ru_f, KEYS_R THUMBS)  // left-hand HRMs
+//MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // right-hand HRMs
 
 &mt {
     quick-tap-ms = <100>;

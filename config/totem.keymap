@@ -54,8 +54,15 @@
 
 ZMK_TAP_DANCE(copy_cut, tap_dance,
     tapping-term-ms = <200>;
-    bindings = <&kp LC(INS)>, <&kp LC(X)>;
+    bindings = <&kp LCTRL>, <&ru_f>;
 )
+
+MAKE_HRM(
+    my_key_hrm,        // Configuration name
+    &kp LC,            // Hold action (Left Control)
+    &kp A,             // Tap action (Key 'A')
+    0                  // Trigger position
+);
 
 &mt {
     quick-tap-ms = <100>;

@@ -54,7 +54,7 @@
 
 ZMK_TAP_DANCE(copy_cut, tap_dance,
     tapping-term-ms = <200>;
-    bindings = <&kp LCTRL>, <&ru_f>;
+    bindings = <&kp LCTRL>, <ru_f>;
 )
 
 MAKE_HRM(

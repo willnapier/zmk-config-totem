@@ -218,6 +218,20 @@
             hold-trigger-on-release;
         };
 
+        hmrtest: hmrtest {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HMR test";
+            bindings = <&kp>, <&ru_sh>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <280>;
+            quick-tap-ms = <175>;
+            require-prior-idle-ms = <150>;
+            flavor = "balanced";
+            hold-trigger-key-positions = <KEYS_L THUMBS>;
+            hold-trigger-on-release;
+        };
+
 
         behavior_slash_or_comment: behavior_slash_or_comment {
             compatible = "zmk,behavior-hold-tap";

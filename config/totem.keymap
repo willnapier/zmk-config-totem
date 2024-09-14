@@ -23,11 +23,10 @@
 
 #define ___ &trans
 #define BASE 0
-#define NAV  1
-#define SYM  2
-#define ADJ  3
-#define TVP1 4
-#define TVP2 5
+#define RUS  1
+#define NAV  2
+#define DIG  3
+#define SYS  4
 
 #define QUICK_TAP_MS 175
 
@@ -218,17 +217,17 @@
             hold-trigger-on-release;
         };
 
-        hmrtest: hmrtest {
+        hml_shift: hml_shift {
             compatible = "zmk,behavior-hold-tap";
-            label = "HMR test";
-            bindings = <&kp>, <&ru_sh>;
+            label = "HML shift";
+            bindings = <&kp>, <&ru_v>;
 
             #binding-cells = <2>;
             tapping-term-ms = <280>;
             quick-tap-ms = <175>;
             require-prior-idle-ms = <150>;
             flavor = "balanced";
-            hold-trigger-key-positions = <KEYS_L THUMBS>;
+            hold-trigger-key-positions = <KEYS_R THUMBS>;
             hold-trigger-on-release;
         };
 
@@ -271,7 +270,7 @@
         rus {
             bindings = <
         &ru_y                 &ru_ts               &ru_u              &ru_k         &ru_ye         &ru_n   &ru_g                 &ru_sh_or_shch O I   &ru_z             &ru_kh
-        &hml LEFT_CONTROL A   &hml LEFT_CONTROL S  &hml LEFT_SHIFT D  &hmlayer 2 F  &kp G     &kp H   &hmr RIGHT_COMMAND J  &hmr RIGHT_SHIFT K   &hmr RIGHT_ALT L  &hmr RIGHT_CONTROL SEMICOLON
+        &hml LEFT_CONTROL A   &hml LEFT_CONTROL S  &hml LEFT_SHIFT _  &hmlayer 2 F  &kp G          &kp H   &hmr RIGHT_COMMAND J  &hmr RIGHT_SHIFT K   &hmr RIGHT_ALT L  &hmr RIGHT_CONTROL SEMICOLON
 &trans  &kp Z                 &kp X                &kp C              &kp V         &kp B          &kp N   &kp M                 &mt LS(SLASH) COMMA  &mt SLASH PERIOD  &mt SLASH LS(N7)              &trans
                                                    &trans             &trans        &trans         &trans  &trans                &trans
             >;
@@ -287,7 +286,7 @@
         };
 
         digits {
-            label = "NAVI";
+            label = "Digits";
             bindings = <
         &kp PIPE                       &kp DOLLAR             &kp LEFT_BRACE                    &kp RIGHT_BRACE                 &press_two_keys GREATER_THAN EQUAL    &kp PLUS   &kp N7        &kp N8        &kp N9        &kp SEMICOLON
         &hml LEFT_CONTROL EXCLAMATION  &hml LEFT_ALT AT_SIGN  &hml LEFT_SHIFT LEFT_PARENTHESIS  &lt 2 RIGHT_PARENTHESIS         &press_two_keys MINUS GREATER_THAN    &kp EQUAL  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp KP_MULTIPLY
@@ -297,7 +296,7 @@
         };
 
         sim_layer {
-            label = "SYM";
+            label = "SYSTEM";
             bindings = <
             &kp F1  &kp F2  &kp F3        &kp F4      &kp F5        &kp F6        &kp F7        &kp F8      &kp F9      &kp F10
             &trans  &trans  &trans        &trans      &trans        &kp C_MUTE    &kp C_PP      &trans      &trans      &trans

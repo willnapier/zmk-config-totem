@@ -204,6 +204,21 @@
             hold-trigger-on-release;
         };
 
+        hmlayer: hmlayer {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HML layer";
+            bindings = <&kt>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <280>;
+            quick-tap-ms = <175>;
+            require-prior-idle-ms = <150>;
+            flavor = "balanced";
+            hold-trigger-key-positions = <KEYS_R THUMBS>;
+            hold-trigger-on-release;
+        };
+
+
         behavior_slash_or_comment: behavior_slash_or_comment {
             compatible = "zmk,behavior-hold-tap";
             label = "BEHAVIOR_SLASH_OR_COMMENT";
@@ -233,7 +248,7 @@
             label = "BASE";
             bindings = <
          &kp Q                &kp W        &lt 3 D       &kp F             &kp K        &kp J    &kp U             &lt 3 R             &kp L             &mt COLON SEMICOLON
-         &hml LEFT_CONTROL A  &hml LALT S  &hml LSHFT E  &lt 2 T           &kp G        &kp Y    &hmr RIGHT_GUI N  &hmr RIGHT_SHIFT I  &hmr RIGHT_ALT O  &hmr RIGHT_CONTROL H
+         &hml LEFT_CONTROL A  &hml LALT S  &hml LSHFT E  &hmlayer 2 T      &kp G        &kp Y    &hmr RIGHT_GUI N  &hmr RIGHT_SHIFT I  &hmr RIGHT_ALT O  &hmr RIGHT_CONTROL H
 &kp TAB  &kp Z                &kp X        &kp C         &kp V             &kp B        &kp P    &kp M             &kp COMMA           &kp DOT           &behavior_slash_or_comment SLASH ASTERISK  &mt DOUBLE_QUOTES SQT
                                            &mo 3         &sk LEFT_COMMAND  &kp SPACE    &kp RET  &lt 4 ESC         &mo 3
             >;
@@ -241,10 +256,10 @@
 
         rus {
             bindings = <
-        &ru_y                &ru_ts               &ru_u              &ru_k    &ru_ye    &ru_n   &ru_g                 &ru_sh_or_shch O I   &ru_z             &ru_kh
-        &hml LEFT_CONTROL A         &hml LEFT_CONTROL S  &hml LEFT_SHIFT D  &lt 2 F  &kp G     &kp H   &hmr RIGHT_COMMAND J  &hmr RIGHT_SHIFT K   &hmr RIGHT_ALT L  &hmr RIGHT_CONTROL SEMICOLON
-&trans  &kp Z                &kp X                &kp C              &kp V    &kp B     &kp N   &kp M                 &mt LS(SLASH) COMMA  &mt SLASH PERIOD  &mt SLASH LS(N7)              &trans
-                                                  &trans             &trans   &trans    &trans  &trans                &trans
+        &ru_y                 &ru_ts               &ru_u              &ru_k         &ru_ye         &ru_n   &ru_g                 &ru_sh_or_shch O I   &ru_z             &ru_kh
+        &hml LEFT_CONTROL A   &hml LEFT_CONTROL S  &hml LEFT_SHIFT D  &hmlayer 2 F  &kp G     &kp H   &hmr RIGHT_COMMAND J  &hmr RIGHT_SHIFT K   &hmr RIGHT_ALT L  &hmr RIGHT_CONTROL SEMICOLON
+&trans  &kp Z                 &kp X                &kp C              &kp V         &kp B          &kp N   &kp M                 &mt LS(SLASH) COMMA  &mt SLASH PERIOD  &mt SLASH LS(N7)              &trans
+                                                   &trans             &trans        &trans         &trans  &trans                &trans
             >;
         };
 

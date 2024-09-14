@@ -49,20 +49,6 @@
         hold-trigger-on-release; \
     )
 
-//MAKE_HRM(hml_control, &kp LC, &ru_f, KEYS_R THUMBS)  // left-hand HRMs
-//MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // right-hand HRMs
-
-ZMK_TAP_DANCE(copy_cut, tap_dance,
-    tapping-term-ms = <200>;
-    bindings = <&kp LCTRL>, <ru_f>;
-)
-
-MAKE_HRM(
-    my_key_hrm,        // Configuration name
-    &kp LC,            // Hold action (Left Control)
-    &kp A,             // Tap action (Key 'A')
-    0                  // Trigger position
-);
 
 &mt {
     quick-tap-ms = <100>;

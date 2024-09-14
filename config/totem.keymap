@@ -51,7 +51,7 @@
 MAKE_HRM(hml, &kp, &kp, KEYS_R THUMBS)  // left-hand HRMs
 MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // right-hand HRMs
 MAKE_HRM(hmlayer, &mo, &kp, KEYS_R THUMBS) // switch layer like HRM
-//MAKE_HRM(hml_shift, <&kp>, <&ru_v>, KEYS_R THUMBS) // right shift
+MAKE_HRM(hml_shift, &kp, &ru_v, KEYS_R THUMBS) // left russian shift
 
 &mt {
     quick-tap-ms = <100>;
@@ -190,20 +190,6 @@ MAKE_HRM(hmlayer, &mo, &kp, KEYS_R THUMBS) // switch layer like HRM
     };
 
     behaviors {
-
-        hml_shift: hml_shift {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HML shift";
-            bindings = <&kp>, <&ru_v>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <280>;
-            quick-tap-ms = <175>;
-            require-prior-idle-ms = <150>;
-            flavor = "balanced";
-            hold-trigger-key-positions = <KEYS_R THUMBS>;
-            hold-trigger-on-release;
-        };
 
         slash_or_comm: slash_or_comm {
             compatible = "zmk,behavior-hold-tap";

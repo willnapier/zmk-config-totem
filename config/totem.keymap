@@ -50,9 +50,19 @@
 
 MAKE_HRM(hml, &kp, &kp, KEYS_R THUMBS)  // left-hand HRMs
 MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // right-hand HRMs
-MAKE_HRM(hmlayer, &mo, &kp, KEYS_R THUMBS) // switch layer like HRM
-MAKE_HRM(hml_shift, &kp, &ru_v, KEYS_R THUMBS) // left russian shift and V
-MAKE_HRM(hmr_shift, &kp, &ru_l, KEYS_L THUMBS) // right russian shift and L
+MAKE_HRM(hml_layer, &mo, &kp, KEYS_R THUMBS) // switch layer like HRM
+
+// left russian home row
+MAKE_HRM(hml_ctrl, &kp, &ru_f, KEYS_R THUMBS)
+MAKE_HRM(hml_opt, &kp, &ru_bi, KEYS_R THUMBS)
+MAKE_HRM(hml_shift, &kp, &ru_v, KEYS_R THUMBS)
+MAKE_HRM(hml_layer_ru, &mo, &ru_a, KEYS_R THUMBS)
+
+// right russian home row
+MAKE_HRM(hmr_ctrl, &kp, &ru_zh, KEYS_L THUMBS)
+MAKE_HRM(hmr_opt, &kp, &ru_d, KEYS_L THUMBS)
+MAKE_HRM(hmr_shift, &kp, &ru_l, KEYS_L THUMBS)
+MAKE_HRM(hmr_cmd, &kp, &ru_o, KEYS_L THUMBS)
 
 &mt {
     quick-tap-ms = <100>;
@@ -223,7 +233,7 @@ MAKE_HRM(hmr_shift, &kp, &ru_l, KEYS_L THUMBS) // right russian shift and L
 //          ╭──────────────┬─────────────┬──────────────┬────────────────┬─────────────╮        ╭─────────────┬──────────────────┬──────────────┬──────────────────┬──────────────────────╮
               &kp Q          &kp W         &lt 3 D        &kp F            &kp K                  &kp J         &kp U              &lt 3 R        &kp L              &mt COLON SEMICOLON
 //          ├──────────────┼─────────────┼──────────────┼────────────────┼─────────────┤        ├─────────────┼──────────────────┼──────────────┼──────────────────┼──────────────────────┤
-              &hml LCTRL A   &hml LALT S   &hml LSHFT E   &hmlayer 2 T     &kp G                  &kp Y         &hmr RIGHT_GUI N   &hmr RSHFT I   &hmr RIGHT_ALT O   &hmr RIGHT_CONTROL H
+              &hml LCTRL A   &hml LALT S   &hml LSHFT E   &hml_layer 2 T     &kp G                  &kp Y         &hmr RIGHT_GUI N   &hmr RSHFT I   &hmr RIGHT_ALT O   &hmr RIGHT_CONTROL H
 // ╭────────┼──────────────┼─────────────┼──────────────┼────────────────┼─────────────┤        ├─────────────┼──────────────────┼──────────────┼──────────────────┼──────────────────────┼──────────────────╮
      &kp TAB  &kp Z          &kp X         &kp C          &kp V            &kp B                  &kp P         &kp M              &kp COMMA      &kp DOT            &slash_or_comm SLASH ASTERISK  &mt DOUBLE_QUOTES SQT
 // ╰────────┴──────────────┴─────────────┼──────────────┼────────────────┼─────────────┤        ├─────────────┼──────────────────┼──────────────┼──────────────────┴──────────────────────┴──────────────────╯
@@ -234,15 +244,15 @@ MAKE_HRM(hmr_shift, &kp, &ru_l, KEYS_L THUMBS) // right russian shift and L
 
         rus {
             bindings = <
-//          ╭──────────────┬─────────────┬───────────────────┬──────────────┬─────────────╮     ╭─────────────┬─────────────────────┬────────────────────┬───────────────────┬──────────────────────╮
-              &ru_y          &ru_ts        &ru_u               &ru_k          &ru_ye              &ru_n         &ru_g                 &ru_sh_or_shch O I   &ru_z               &ru_kh
-//          ├──────────────┼─────────────┼───────────────────┼──────────────┼─────────────┤     ├─────────────┼─────────────────────┼────────────────────┼───────────────────┼──────────────────────┤
-              &hml LCTRL A   &hml LALT S   &hml_shift LSHFT D  &hmlayer 2 F   &ru_p               &ru_r         &hmr RIGHT_COMMAND J  &hmr_shift RSHFT K   &hmr RIGHT_ALT L    &hmr RIGHT_CONTROL SEMICOLON
-// ╭────────┼──────────────┼─────────────┼───────────────────┼──────────────┼─────────────┤     ├─────────────┼─────────────────────┼────────────────────┼───────────────────┼──────────────────────┼────────╮
-     ___      &ru_ya         &ru_ch        &ru_s               &ru_m          &ru_i               &ru_t         &ru_tone              &ru_b                &ru_yu              &slash_or_comm SLASH ASTERISK   ___
-// ╰────────┴──────────────┴─────────────┼───────────────────┼──────────────┼─────────────┤     ├─────────────┼─────────────────────┼────────────────────┼───────────────────┴──────────────────────┴────────╯
-                                           ___                 ___            ___                 ___           ___                   ___
-//                                       ╰───────────────────┴──────────────┴─────────────╯     ╰─────────────┴─────────────────────┴────────────────────╯
+//          ╭───────────────────┬─────────────────┬───────────────────┬───────────────────┬─────────────╮     ╭─────────────┬──────────────────────────┬───────────────────────┬───────────────────────┬───────────────────────────────────╮
+              &ru_y               &ru_ts            &ru_u               &ru_k               &ru_ye              &ru_n         &ru_g                      &ru_sh_or_shch O I      &ru_z                   &ru_kh
+//          ├───────────────────┼─────────────────┼───────────────────┼───────────────────┼─────────────┤     ├─────────────┼──────────────────────────┼───────────────────────┼───────────────────────┼───────────────────────────────────┤
+              &hml_ctrl LCTRL A   &hml_opt LALT S   &hml_shift LSHFT D  &hml_layer_ru 2 F   &ru_p               &ru_r         &hmr_cmd RIGHT_COMMAND J   &hmr_shift RSHFT K      &hmr_opt RIGHT_ALT L    &hmr_ctrl RIGHT_CONTROL SEMICOLON
+// ╭────────┼───────────────────┼─────────────────┼───────────────────┼───────────────────┼─────────────┤     ├─────────────┼──────────────────────────┼───────────────────────┼───────────────────────┼───────────────────────────────────┼────────╮
+     ___      &ru_ya              &ru_ch            &ru_s               &ru_m               &ru_i               &ru_t         &ru_tone                   &ru_b                   &ru_yu                  &slash_or_comm SLASH ASTERISK        ___
+// ╰────────┴───────────────────┴─────────────────┼───────────────────┼───────────────────┼─────────────┤     ├─────────────┼──────────────────────────┼───────────────────────┼───────────────────────┴───────────────────────────────────┴────────╯
+                                                    ___                 ___            ___                      ___           ___                        ___
+//                                                ╰───────────────────┴───────────────────┴─────────────╯     ╰─────────────┴──────────────────────────┴────────────────────╯
             >;
         };
 

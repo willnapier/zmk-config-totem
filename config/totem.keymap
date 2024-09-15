@@ -180,7 +180,7 @@ MAKE_HRM(hmr_cmd, &lm, &ru_o, KEYS_L THUMBS)
             label = "FUN_ARROW_RIGHT";
         };
 
-        macros_comment: macros_comment {
+        comment: comment {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp FSLH &kp STAR>;
@@ -191,7 +191,7 @@ MAKE_HRM(hmr_cmd, &lm, &ru_o, KEYS_L THUMBS)
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&to 1 &kp LA(LG(LC(F)))>;
-            label = "NEW_MACRO";
+            label = "TO_RUSSIAN";
         };
 
         to_eng: to_eng {
@@ -204,10 +204,10 @@ MAKE_HRM(hmr_cmd, &lm, &ru_o, KEYS_L THUMBS)
 
     behaviors {
 
-        slash_or_comm: slash_or_comm {
+        comment_or: comment_or {
             compatible = "zmk,behavior-hold-tap";
             label = "slash_or_comm";
-            bindings = <&press_two_keys>, <&kp>;
+            bindings = <&comment>, <&kp>;
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
@@ -218,6 +218,26 @@ MAKE_HRM(hmr_cmd, &lm, &ru_o, KEYS_L THUMBS)
             compatible = "zmk,behavior-hold-tap";
             label = "RU_SH_OR_SHCH";
             bindings = <&ru_shch>, <&ru_sh>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            flavor = "tap-preferred";
+        };
+
+        ru_b_or_coma: ru_b_or_coma {
+            compatible = "zmk,behavior-hold-tap";
+            label = "RU_SH_OR_SHCH";
+            bindings = <&kp>, <&ru_b>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            flavor = "tap-preferred";
+        };
+
+        ru_yu_or_dot: ru_yu_or_dot {
+            compatible = "zmk,behavior-hold-tap";
+            label = "RU_SH_OR_SHCH";
+            bindings = <&kp>, <&ru_yu>;
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
@@ -237,7 +257,7 @@ MAKE_HRM(hmr_cmd, &lm, &ru_o, KEYS_L THUMBS)
 //          ├──────────────┼─────────────┼──────────────┼────────────────┼─────────────┤        ├─────────────┼──────────────────┼──────────────┼──────────────────┼──────────────────────┤
               &hml LCTRL A   &hml LALT S   &hml LSHFT E   &hml_layer 2 T   &kp G                  &kp Y         &hmr RIGHT_GUI N   &hmr RSHFT I   &hmr RIGHT_ALT O   &hmr RIGHT_CONTROL H
 // ╭────────┼──────────────┼─────────────┼──────────────┼────────────────┼─────────────┤        ├─────────────┼──────────────────┼──────────────┼──────────────────┼──────────────────────┼──────────────────╮
-     &kp TAB  &kp Z          &kp X         &kp C          &kp V            &kp B                  &kp P         &kp M              &kp COMMA      &kp DOT            &slash_or_comm SLASH ASTERISK  &mt DOUBLE_QUOTES SQT
+     &kp TAB  &kp Z          &kp X         &kp C          &kp V            &kp B                  &kp P         &kp M              &kp COMMA      &kp DOT            &comment_or 0 SLASH    &mt DOUBLE_QUOTES SQT
 // ╰────────┴──────────────┴─────────────┼──────────────┼────────────────┼─────────────┤        ├─────────────┼──────────────────┼──────────────┼──────────────────┴──────────────────────┴──────────────────╯
                                            &mo 3         &sk LEFT_COMMAND  &kp SPACE              &kp RET       &lt 4 ESC          &mo 3
 //                                       ╰──────────────┴────────────────┴─────────────╯        ╰─────────────┴──────────────────┴──────────────╯
@@ -251,7 +271,7 @@ MAKE_HRM(hmr_cmd, &lm, &ru_o, KEYS_L THUMBS)
 //          ├───────────────────┼─────────────────┼───────────────────┼───────────────────┼─────────────┤     ├─────────────┼──────────────────────────┼───────────────────────┼───────────────────────┼───────────────────────────────────┤
               &hml_ctrl 0 LCTRL   &hml_opt LALT S   &hml_shift LSHFT D  &hml_layer_ru 2 F   &ru_p               &ru_r         &hmr_cmd 0 RIGHT_COMMAND   &hmr_shift RSHFT K      &hmr_opt RIGHT_ALT L    &hmr_ctrl RIGHT_CONTROL SEMICOLON
 // ╭────────┼───────────────────┼─────────────────┼───────────────────┼───────────────────┼─────────────┤     ├─────────────┼──────────────────────────┼───────────────────────┼───────────────────────┼───────────────────────────────────┼────────╮
-     ___      &ru_ya              &ru_ch            &ru_s               &ru_m               &ru_i               &ru_t         &ru_tone                   &ru_b                   &ru_yu                  &slash_or_comm SLASH ASTERISK        ___
+     ___      &ru_ya              &ru_ch            &ru_s               &ru_m               &ru_i               &ru_t         &ru_tone                   &ru_b_or_coma COMMA 0   &ru_yu_or_dot DOT       ___                                 ___
 // ╰────────┴───────────────────┴─────────────────┼───────────────────┼───────────────────┼─────────────┤     ├─────────────┼──────────────────────────┼───────────────────────┼───────────────────────┴───────────────────────────────────┴────────╯
                                                     ___                 ___            ___                      ___           ___                        ___
 //                                                ╰───────────────────┴───────────────────┴─────────────╯     ╰─────────────┴──────────────────────────┴────────────────────╯

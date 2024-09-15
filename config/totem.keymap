@@ -235,7 +235,7 @@ MAKE_HRM(hmr_cmd, &lm, &ru_o, KEYS_L THUMBS)
 //          ╭──────────────┬─────────────┬──────────────┬────────────────┬─────────────╮        ╭─────────────┬──────────────────┬──────────────┬──────────────────┬──────────────────────╮
               &kp Q          &kp W         &lt 3 D        &kp F            &kp K                  &kp J         &kp U              &lt 3 R        &kp L              &mt COLON SEMICOLON
 //          ├──────────────┼─────────────┼──────────────┼────────────────┼─────────────┤        ├─────────────┼──────────────────┼──────────────┼──────────────────┼──────────────────────┤
-              &hml LCTRL A   &hml LALT S   &hml LSHFT E   &hml_layer 2 T   &kp G                &kp Y         &hmr RIGHT_GUI N   &hmr RSHFT I   &hmr RIGHT_ALT O   &hmr RIGHT_CONTROL H
+              &hml LCTRL A   &hml LALT S   &hml LSHFT E   &hml_layer 2 T   &kp G                  &kp Y         &hmr RIGHT_GUI N   &hmr RSHFT I   &hmr RIGHT_ALT O   &hmr RIGHT_CONTROL H
 // ╭────────┼──────────────┼─────────────┼──────────────┼────────────────┼─────────────┤        ├─────────────┼──────────────────┼──────────────┼──────────────────┼──────────────────────┼──────────────────╮
      &kp TAB  &kp Z          &kp X         &kp C          &kp V            &kp B                  &kp P         &kp M              &kp COMMA      &kp DOT            &slash_or_comm SLASH ASTERISK  &mt DOUBLE_QUOTES SQT
 // ╰────────┴──────────────┴─────────────┼──────────────┼────────────────┼─────────────┤        ├─────────────┼──────────────────┼──────────────┼──────────────────┴──────────────────────┴──────────────────╯
@@ -259,21 +259,28 @@ MAKE_HRM(hmr_cmd, &lm, &ru_o, KEYS_L THUMBS)
         };
 
         Navigation {
+            label = "Navigation";
             bindings = <
-        &trans  &kp LS(LG(NUMBER_3))  &kp LS(LG(NUMBER_4))  &trans  &trans    &none   &kp HOME      &kp UP    &kp END        &kt PAGE_UP
-        &trans  &trans                &trans                &trans  &trans    &none   &kp LEFT      &kp DOWN  &kp RIGHT      &none
-&trans  &trans  &trans                &trans                &trans  &trans    &none   &kp LA(LEFT)  &none     &kp LA(RIGHT)  &kt PAGE_DOWN  &kp CAPSLOCK
-                                      &trans                &trans  &trans    &trans  &trans        &trans
+//          ╭──────────────┬───────────────────────┬──────────────────────┬───────────────────┬─────────────╮        ╭─────────────┬──────────────────┬──────────────┬──────────────────┬──────────────────────╮
+              ___            &kp LS(LG(NUMBER_3))    &kp LS(LG(NUMBER_4))   ___                 ___                    &none         &kp HOME           &kp UP         &kp END            &kt PAGE_UP
+//          ├──────────────┼───────────────────────┼──────────────────────┼───────────────────┼─────────────┤        ├─────────────┼──────────────────┼──────────────┼──────────────────┼──────────────────────┤
+              ___            ___                     ___                    ___                 ___                    &none         &kp LEFT           &kp DOWN       &kp RIGHT          &none
+// ╭────────┼──────────────┼───────────────────────┼──────────────────────┼───────────────────┼─────────────┤        ├─────────────┼──────────────────┼──────────────┼──────────────────┼──────────────────────┼──────────────────╮
+     ___      ___            ___                     ___                    ___                 ___                    &none         &kp LA(LEFT)       &none          &kp LA(RIGHT)      &kt PAGE_DOWN          &kp CAPSLOCK
+// ╰────────┴──────────────┴───────────────────────┼──────────────────────┼───────────────────┼─────────────┤        ├─────────────┼──────────────────┼──────────────┼──────────────────┴──────────────────────┴──────────────────╯
+                                                     &mo 3                  ___                 &kp SPACE              &kp RET       &lt 4 ESC          &mo 3
+//                                                 ╰──────────────────────┴───────────────────┴─────────────╯        ╰─────────────┴──────────────────┴──────────────╯
             >;
         };
+
 
         digits {
             label = "Digits";
             bindings = <
         &kp PIPE                       &kp DOLLAR             &kp LEFT_BRACE                    &kp RIGHT_BRACE                 &press_two_keys GREATER_THAN EQUAL    &kp PLUS   &kp N7        &kp N8        &kp N9        &kp SEMICOLON
         &hml LEFT_CONTROL EXCLAMATION  &hml LEFT_ALT AT_SIGN  &hml LEFT_SHIFT LEFT_PARENTHESIS  &lt 2 RIGHT_PARENTHESIS         &press_two_keys MINUS GREATER_THAN    &kp EQUAL  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp KP_MULTIPLY
-&trans  &kp AMPERSAND                  &kp LCTRL              &mt LESS_THAN LEFT_BRACKET        &mt GREATER_THAN RIGHT_BRACKET  &press_two_keys LESS_THAN EQUAL       &kp MINUS  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp PERIOD       &kp SLASH
-                                                              &trans                            &trans                          &trans                                &trans     &kp N0        &trans
+___  &kp AMPERSAND                  &kp LCTRL              &mt LESS_THAN LEFT_BRACKET        &mt GREATER_THAN RIGHT_BRACKET  &press_two_keys LESS_THAN EQUAL       &kp MINUS  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp PERIOD       &kp SLASH
+                                                              ___                            ___                          ___                                ___     &kp N0        ___
             >;
         };
 
@@ -281,9 +288,9 @@ MAKE_HRM(hmr_cmd, &lm, &ru_o, KEYS_L THUMBS)
             label = "SYSTEM";
             bindings = <
             &kp F1  &kp F2  &kp F3        &kp F4      &kp F5        &kp F6        &kp F7        &kp F8      &kp F9      &kp F10
-            &trans  &trans  &trans        &trans      &trans        &kp C_MUTE    &kp C_PP      &trans      &trans      &trans
-&bt BT_CLR  &trans  &trans  &out OUT_TOG  &bt BT_PRV  &bt BT_NXT    &kp C_VOL_DN  &kp C_VOL_UP  &kp C_PREV  &kp C_NEXT  &trans   &trans
-                            &trans        &trans      &trans        &trans        &trans        &trans
+            ___  ___  ___        ___      ___        &kp C_MUTE    &kp C_PP      ___      ___      ___
+&bt BT_CLR  ___  ___  &out OUT_TOG  &bt BT_PRV  &bt BT_NXT    &kp C_VOL_DN  &kp C_VOL_UP  &kp C_PREV  &kp C_NEXT  ___   ___
+                            ___        ___      ___        ___        ___        ___
             >;
         };
     };

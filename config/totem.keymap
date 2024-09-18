@@ -21,7 +21,9 @@
 #include "zmk-helpers/unicode-chars/russian.dtsi"
 #include <behaviors.dtsi>
 
+#define XXX &none
 #define ___ &trans
+
 #define BASE 0
 #define RUS  1
 #define NAV  2
@@ -29,6 +31,25 @@
 #define SYS  4
 
 #define QUICK_TAP_MS 175
+
+&sk {  // sticky-key config
+    release-after-ms = <900>;  // release after 0.9s
+    quick-release;             // no double capitalization when rolling keys
+};
+
+&sl {  // sticky-layer config
+    ignore-modifiers;          // allow chording sticky mods & layers
+};
+
+&lt {  // layer-tap config
+    flavor = "balanced";
+    tapping-term-ms = <200>;
+    quick-tap-ms = <QUICK_TAP_MS>;
+};
+
+&leader {  // leader-key config
+    timeout-ms = <650>;
+};
 
 /* Timeless homerow mods */
 // https://github.com/urob/zmk-config/tree/main#timeless-homerow-mods
@@ -290,7 +311,7 @@ MAKE_HRM(hmr_cmd, &lm, &ru_o, KEYS_L THUMBS)
 // ╭────────┼───────────────────┼─────────────────┼───────────────────┼──────────────────────┼─────────────┤     ├─────────────┼──────────────────────────┼───────────────────────┼───────────────────────┼───────────────────────────────────┼────────╮
      ___      &ru_ya              &ru_ch            &ru_s               &ru_m                  &ru_i               &ru_t         &ru_tone                   &ru_b_or COMMA 0        &ru_yu_or DOT 0         ___                                 ___
 // ╰────────┴───────────────────┴─────────────────┼───────────────────┼──────────────────────┼─────────────┤     ├─────────────┼──────────────────────────┼───────────────────────┼───────────────────────┴───────────────────────────────────┴────────╯
-                                                    ___                 $lm 0 LEFT_COMMAND   ___                 ___           ___                        ___
+                                                    ___                 &lm 0 LEFT_COMMAND   ___                 ___           ___                        ___
 //                                                ╰───────────────────┴──────────────────────┴─────────────╯     ╰─────────────┴──────────────────────────┴────────────────────╯
             >;
         };

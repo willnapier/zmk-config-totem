@@ -84,6 +84,11 @@ MAKE_HRM(hmr_opt, &kp, &ru_d, KEYS_L THUMBS)
 MAKE_HRM(hmr_shift, &kp, &ru_l, KEYS_L THUMBS)
 MAKE_HRM(hmr_cmd, &lm, &ru_o, KEYS_L THUMBS)
 
+ZMK_MACRO(more_or_equal, bindings = <&kp MINUS &kp GT>;)
+ZMK_MACRO(less_or_equal, bindings = <&kp LT &kp EQUAL>;)
+ZMK_MACRO(fun_arrow_right, bindings = <&kp MINUS &kp GT>;)
+
+
 &mt {
     quick-tap-ms = <100>;
     global-quick-tap;
@@ -177,26 +182,6 @@ MAKE_HRM(hmr_cmd, &lm, &ru_o, KEYS_L THUMBS)
                 <&kp MACRO_PLACEHOLDER>;
         };
 
-        more_or_equal: more_or_equal {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp MINUS &kp GT>;
-            label = "MORE_OR_EQUAL";
-        };
-
-        less_or_equal: less_or_equal {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LT &kp EQUAL>;
-            label = "LESS_OR_EQUAL";
-        };
-
-        fun_arrow_right: fun_arrow_right {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp MINUS &kp GT>;
-            label = "FUN_ARROW_RIGHT";
-        };
 
         comment: comment {
             compatible = "zmk,behavior-macro";
@@ -292,7 +277,7 @@ MAKE_HRM(hmr_cmd, &lm, &ru_o, KEYS_L THUMBS)
             >;
         };
 
-/*
+/*ффчсввавафафф
            й  ц  у  к  е     н  г   шщ  з  хэ
            ф! ы! в! а! п     р  о!  л!  д! ж!
            я  ч  с  м  и     т  ьъ  б,  ю. /*

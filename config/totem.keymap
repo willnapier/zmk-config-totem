@@ -223,6 +223,15 @@ MAKE_HRM(hmr_cmd, &lm, &ru_o, KEYS_L THUMBS)
 
     behaviors {
 
+        quote_mode: quote_mode {
+            compatible = "zmk,behavior-mod-morph";
+            label = "QTMODE";
+            bindings = <&kp SQT>, <&kp GRAVE>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LCTL|MOD_RCTL)>;
+        };
+
         comment_or: comment_or {
             compatible = "zmk,behavior-hold-tap";
             label = "slash_or_comm";

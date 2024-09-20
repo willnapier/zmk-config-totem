@@ -84,9 +84,21 @@ MAKE_HRM(hmr_opt, &kp, &ru_d, KEYS_L THUMBS)
 MAKE_HRM(hmr_shift, &kp, &ru_l, KEYS_L THUMBS)
 MAKE_HRM(hmr_cmd, &lm, &ru_o, KEYS_L THUMBS)
 
-ZMK_MACRO(more_or_equal, bindings = <&kp MINUS &kp GT>;)
-ZMK_MACRO(less_or_equal, bindings = <&kp LT &kp EQUAL>;)
-ZMK_MACRO(fun_arrow_right, bindings = <&kp MINUS &kp GT>;)
+ZMK_MACRO(more_or_equal,
+    wait-ms = <0>;
+    tap-ms = <5>;
+    bindings = <&kp MINUS &kp GT>;
+ )
+ZMK_MACRO(less_or_equal,
+    wait-ms = <0>;
+    tap-ms = <5>;
+    bindings = <&kp LT &kp EQUAL>;
+)
+ZMK_MACRO(fun_arrow_right,
+     wait-ms = <0>;
+     tap-ms = <5>;
+     bindings = <&kp MINUS &kp GT>;
+)
 
 
 &mt {

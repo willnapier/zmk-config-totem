@@ -131,7 +131,7 @@ MAKE_HRM(hmr_cmd, &lm, &ru_o, KEYS_L THUMBS)
         };
 
         caps_lock {
-            bindings = <&sk CAPS_LOCK>;
+            bindings = <&kp CAPSLOCK>;
             key-positions = <13 12 11>;
             timeout-ms = <100>;
         };

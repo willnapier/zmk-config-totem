@@ -105,47 +105,46 @@ MAKE_HRM(hmr_cmd, &lm, &ru_o, KEYS_L THUMBS)
     combos {
         compatible = "zmk,combos";
 
-        combo_eng {
-            timeout-ms = <150>;
-            key-positions = <LT4 LT3>;
-            bindings = <&to_eng>;
-            require-prior-idle-ms = <100>;
-        };
-
         backspace {
             bindings = <&kp BACKSPACE>;
             key-positions = <RM1 RM2>;
-            timeout-ms = <70>;
+            timeout-ms = <50>;
+            require-prior-idle-ms = <200>
         };
 
         opt_backspace {
             bindings = <&kp LA(BACKSPACE)>;
             key-positions = <RM1 RM2 RM3>;
             timeout-ms = <70>;
+            require-prior-idle-ms = <200>
         };
 
-//        shift {
-//            bindings = <&sk LEFT_SHIFT>;
-//            key-positions = <LM2 LM1>;
-//            timeout-ms = <100>;
-//        };
-//
-//        caps_lock {
-//            bindings = <&caps_word>;
-//            key-positions = <LM3 LM2 LM1>;
-//            timeout-ms = <100>;
-//        };
+        shift {
+            bindings = <&sk LEFT_SHIFT>;
+            key-positions = <LM2 LM1>;
+            timeout-ms = <50>;
+            require-prior-idle-ms = <200>
+        };
 
-        to_digits_layer {
-            bindings = <&to 3>;
+        caps_lock {
+            bindings = <&caps_word>;
             key-positions = <LM3 LM2 LM1>;
+            timeout-ms = <100>;
+            require-prior-idle-ms = <200>
         };
 
         combo_to_rus {
             bindings = <&to_russian>;
             key-positions = <RT3 RT4>;
-            timeout-ms = <150>;
-            require-prior-idle-ms = <100>;
+            timeout-ms = <250>;
+            require-prior-idle-ms = <200>;
+        };
+
+        combo_to_eng {
+            bindings = <&to_eng>;
+            key-positions = <LT4 LT3>;
+            timeout-ms = <250>;
+            require-prior-idle-ms = <200>;
         };
     };
 

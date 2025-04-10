@@ -21,20 +21,20 @@ jobs:
           west init -l config
           west update
 
-      - name: Build Left Firmware
+      - name: Build Left Half
         run: |
           west build -s zmk/app -d build/left \
             -b seeeduino_xiao_ble \
             -- -DZMK_CONFIG=$(pwd)/config -DSHIELD=totem_left
 
-      - name: Build Right Firmware
+      - name: Build Right Half
         run: |
           west build -s zmk/app -d build/right \
             -b seeeduino_xiao_ble \
             -- -DZMK_CONFIG=$(pwd)/config -DSHIELD=totem_right
 
       - name: Upload Firmware Artifacts
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v3@c2d5f69d1c3757d4f3843d158f1dc1c6b6372006
         with:
           name: zmk-firmware
           path: |

@@ -16,27 +16,29 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v3
 
-      - name: Initialize West
+      - name: Initialize West and Update
         run: |
           west init -l config
           west update
 
-      - name: Build Left Half
+      - name: Build Left Firmware
         run: |
           west build -s zmk/app -d build/left \
             -b seeeduino_xiao_ble \
-            -- -DZMK_CONFIG=$(pwd)/config -DSHIELD=totem_left
+            -- -DZMK_CONFIG=$(pwd)/config
+          mv build/left/zephyr/zmk.uf2 build/zmk-left.uf2
 
-      - name: Build Right Half
+      - name: Build Right Firmware
         run: |
           west build -s zmk/app -d build/right \
             -b seeeduino_xiao_ble \
-            -- -DZMK_CONFIG=$(pwd)/config -DSHIELD=totem_right
+            -- -DZMK_CONFIG=$(pwd)/config
+          mv build/right/zephyr/zmk.uf2 build/zmk-right.uf2
 
       - name: Upload Firmware Artifacts
-        uses: actions/upload-artifact@v3@c2d5f69d1c3757d4f3843d158f1dc1c6b6372006
+        uses: actions/upload-artifact@v3
         with:
           name: zmk-firmware
           path: |
-            build/left/zephyr/zmk.uf2
-            build/right/zephyr/zmk.uf2
+            build/zmk-left.uf2
+            build/zmk-right.uf2

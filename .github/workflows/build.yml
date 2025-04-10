@@ -21,13 +21,13 @@ jobs:
           west init -l config
           west update
 
-      - name: Build Left Half
+      - name: Build Left Firmware
         run: |
           west build -s zmk/app -d build/left \
             -b seeeduino_xiao_ble \
             -- -DZMK_CONFIG=$(pwd)/config -DSHIELD=totem_left
 
-      - name: Build Right Half
+      - name: Build Right Firmware
         run: |
           west build -s zmk/app -d build/right \
             -b seeeduino_xiao_ble \

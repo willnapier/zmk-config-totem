@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
 
     container:
-      image: zmkfirmware/zmk-dev-arm:3.2
+      image: zmkfirmware/zmk-dev-container:latest
 
     steps:
       - name: Checkout repository

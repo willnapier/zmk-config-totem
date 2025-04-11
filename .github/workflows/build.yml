@@ -15,7 +15,7 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Initialize and update west modules
         run: |
@@ -27,13 +27,13 @@ jobs:
         run: |
           west build -s zmk/app -d build/left \
             -b seeeduino_xiao_ble \
-            -- -DZMK_CONFIG=$(pwd)/config -DSHIELD=totem_left
+            -- -DZMK_CONFIG=$(pwd)/config
 
       - name: Build right half
         run: |
           west build -s zmk/app -d build/right \
             -b seeeduino_xiao_ble \
-            -- -DZMK_CONFIG=$(pwd)/config -DSHIELD=totem_right
+            -- -DZMK_CONFIG=$(pwd)/config
 
       - name: Upload firmware artifacts
         uses: actions/upload-artifact@v4

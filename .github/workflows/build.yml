@@ -16,10 +16,11 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Initialize west
+      - name: Initialize and update west modules
         run: |
           west init -l config
           west update
+          west zephyr-export
 
       - name: Build left half
         run: |

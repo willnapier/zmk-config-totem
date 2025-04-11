@@ -13,28 +13,28 @@ jobs:
       image: zmkfirmware/zmk-dev-arm:2.5
 
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v3
 
-      - name: Initialize West
+      - name: Initialize west
         run: |
           west init -l config
           west update
 
-      - name: Build Left Half
+      - name: Build left half
         run: |
           west build -s zmk/app -d build/left \
             -b seeeduino_xiao_ble \
             -- -DZMK_CONFIG=$(pwd)/config -DSHIELD=totem_left
 
-      - name: Build Right Half
+      - name: Build right half
         run: |
           west build -s zmk/app -d build/right \
             -b seeeduino_xiao_ble \
             -- -DZMK_CONFIG=$(pwd)/config -DSHIELD=totem_right
 
-      - name: Upload Firmware Artifacts
-        uses: actions/upload-artifact@v4
+      - name: Upload firmware artifacts
+        uses: actions/upload-artifact@v3
         with:
           name: zmk-firmware
           path: |

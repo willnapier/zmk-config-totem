@@ -9,8 +9,9 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+
     container:
-      image: zmkfirmware/zmk-dev-arm:2.5
+      image: zmkfirmware/zmk-dev-arm:3.2
 
     steps:
       - name: Checkout repository

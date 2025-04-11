@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
 
     container:
-      image: zmkfirmware/zmk-dev-container:latest
+      image: zmkfirmware/zmk-dev-arm:3.2
 
     steps:
       - name: Checkout repository
@@ -41,4 +41,5 @@ jobs:
           name: zmk-firmware
           path: |
             build/left/zephyr/zmk.uf2
+
             build/right/zephyr/zmk.uf2

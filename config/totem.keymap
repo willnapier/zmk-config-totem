@@ -38,7 +38,7 @@
     ignore-modifiers;          // allow chording sticky mods & layers
 };
 
-&lt {  // layer-tap config
+< {  // layer-tap config
     flavor = "balanced";
     tapping-term-ms = <200>;
     quick-tap-ms = <QUICK_TAP_MS>;
@@ -109,10 +109,10 @@ MAKE_HRM(hml_layer, &mo, &kp, KEYS_R THUMBS) // switch layer like HRM
         Norman {
             label = "BASE";
             bindings = <
-                &kp Q          &kp W         < DIG D       &kp F             &kp K                  &kp J         &kp U              < DIG R      &kp L              &mt COLON SEMICOLON
-                &hml LCTRL A   &hml LALT S   &hml LSHFT E  &hml_layer NAV T  &kp G                  &kp Y         &hmr RIGHT_GUI N   &hmr RSHFT I   &hmr RIGHT_ALT O   &hmr RIGHT_CONTROL H
+                &kp Q          &kp W         < 3 D         &kp F             &kp K                  &kp J         &kp U              < 3 R        &kp L              &mt COLON SEMICOLON
+                &hml LCTRL A   &hml LALT S   &hml LSHFT E  &hml_layer 2 T    &kp G                  &kp Y         &hmr RIGHT_GUI N   &hmr RSHFT I   &hmr RIGHT_ALT O   &hmr RIGHT_CONTROL H
                 &kp TAB        &kp Z         &kp X         &kp C             &kp V                  &kp B         &kp P              &kp M          &kp COMMA          &kp DOT            &kp SLASH              &all_quotes
-                &sk LEFT_SHIFT &sk LEFT_COMMAND &kp SPACE              &kp RET       < SYS ESC        &mo DIG
+                &sk LEFT_SHIFT &sk LEFT_COMMAND &kp SPACE              &kp RET       < 4 ESC          &mo 3
             >;
         };
 
@@ -130,7 +130,7 @@ MAKE_HRM(hml_layer, &mo, &kp, KEYS_R THUMBS) // switch layer like HRM
             label = "Digits";
             bindings = <
                 &kp PIPE                 &kp DOLLAR             &kp LEFT_BRACE               &kp RIGHT_BRACE                &none                                          &kp PLUS         &kp N7             &kp N8         &kp N9             &kp SEMICOLON
-                &hml LCTRL EXCLAMATION  &hml LEFT_ALT AT_SIGN   &hml LSHFT LEFT_PARENTHESIS  < NAV RIGHT_PARENTHESIS      &none                                          &kp EQUAL        &kp N4             &kp N5         &kp N6             &kp KP_MULTIPLY
+                &hml LCTRL EXCLAMATION  &hml LEFT_ALT AT_SIGN   &hml LSHFT LEFT_PARENTHESIS  < 2 RIGHT_PARENTHESIS      &none                                          &kp EQUAL        &kp N4             &kp N5         &kp N6             &kp KP_MULTIPLY
                 ___                      &kp AMPERSAND           &kp LCTRL              &mt LESS_THAN LEFT_BRACKET   &mt GREATER_THAN RIGHT_BRACKET  &none                                          &mt UNDER MINUS  &kp N1             &kp N2         &kp N3             &kp PERIOD             &kp SLASH
                 ___                      ___                     ___                    ___                          ___                                            ___             &kp N0             ___
             >;

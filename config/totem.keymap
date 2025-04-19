@@ -183,20 +183,6 @@ MAKE_HRM(hmr_cmd, &lm, &ru_o, KEYS_L THUMBS)
             bindings = <&kp FSLH &kp STAR>;
             label = "MACROS_COMMENT";
         };
-
-        to_russian: to_russian {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&to RUS &kp LA(LG(LC(F)))>;
-            label = "TO_RUSSIAN";
-        };
-
-        to_eng: to_eng {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&to BASE &kp LC(LA(LG(D)))>;
-            label = "TO_ENG";
-        };
     };
 
     behaviors {
@@ -277,7 +263,7 @@ MAKE_HRM(hmr_cmd, &lm, &ru_o, KEYS_L THUMBS)
 //                                       ╰───────────────┴─────────────────┴─────────────╯        ╰─────────────┴──────────────────┴──────────────╯
             >;
         };
-        
+
 
         Navigation {
             label = "Navigation";

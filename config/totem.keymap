@@ -18,14 +18,12 @@
 #include <dt-bindings/zmk/outputs.h>
 #include "zmk-helpers/helper.h"
 #include "zmk-helpers/key-labels/totem.h"
-#include "zmk-helpers/unicode-chars/russian.dtsi"
 #include <behaviors.dtsi>
 
 #define XXX &none
 #define ___ &trans
 
 #define BASE 0
-#define RUS  1
 #define NAV  2
 #define DIG  3
 #define SYS  4
@@ -78,21 +76,6 @@
 MAKE_HRM(hml, &kp, &kp, KEYS_R THUMBS)  // left-hand HRMs
 MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // right-hand HRMs
 MAKE_HRM(hml_layer, &mo, &kp, KEYS_R THUMBS) // switch layer like HRM
-
-// left russian home row
-//MAKE_HRM(hml_ctrl, &kp, &ru_f, KEYS_R THUMBS)
-MAKE_HRM(hml_ctrl, &lm, &ru_f, KEYS_R THUMBS)
-MAKE_HRM(hml_opt, &kp, &ru_bi, KEYS_R THUMBS)
-MAKE_HRM(hml_shift, &kp, &ru_v, KEYS_R THUMBS)
-MAKE_HRM(hml_layer_ru, &mo, &ru_a, KEYS_R THUMBS)
-
-
-// right russian home row
-MAKE_HRM(hmr_ctrl, &kp, &ru_zh, KEYS_L THUMBS)
-MAKE_HRM(hmr_opt, &kp, &ru_d, KEYS_L THUMBS)
-MAKE_HRM(hmr_shift, &kp, &ru_l, KEYS_L THUMBS)
-MAKE_HRM(hmr_cmd, &lm, &ru_o, KEYS_L THUMBS)
-
 
 &mt {
     quick-tap-ms = <100>;
@@ -191,46 +174,6 @@ MAKE_HRM(hmr_cmd, &lm, &ru_o, KEYS_L THUMBS)
             compatible = "zmk,behavior-hold-tap";
             label = "slash_or_comm";
             bindings = <&comment>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            flavor = "tap-preferred";
-        };
-
-        ru_sh_or_shch: ru_sh_or_shch {
-            compatible = "zmk,behavior-hold-tap";
-            label = "RU_SH_OR_SHCH";
-            bindings = <&ru_shch>, <&ru_sh>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            flavor = "tap-preferred";
-        };
-
-        ru_b_or: ru_b_or {
-            compatible = "zmk,behavior-hold-tap";
-            label = "RU_B_OR_COMA";
-            bindings = <&kp>, <&ru_b>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            flavor = "tap-preferred";
-        };
-
-        ru_yu_or: ru_yu_or {
-            compatible = "zmk,behavior-hold-tap";
-            label = "RU_YU_OR_DOT";
-            bindings = <&kp>, <&ru_yu>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            flavor = "tap-preferred";
-        };
-
-        ru_kh_or_e: ru_kh_or_e {
-            compatible = "zmk,behavior-hold-tap";
-            label = "RU_KH_OR_E";
-            bindings = <&ru_e>, <&ru_kh>;
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
